@@ -1,0 +1,263 @@
+/* Enhanced Glow Orb Animations */
+
+/* Calm - Gentle breathing */
+@keyframes gentle-breathe {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+/* Excited - Wild pulsing with bounce */
+@keyframes wild-pulse {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.3) rotate(90deg);
+  }
+  50% {
+    transform: scale(0.9) rotate(180deg);
+  }
+  75% {
+    transform: scale(1.2) rotate(270deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+/* Focused - Steady rhythmic glow */
+@keyframes steady-glow {
+  0%, 100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.05);
+    filter: brightness(1.3);
+  }
+}
+
+/* Achey - Slow drift with subtle movement */
+@keyframes slow-drift {
+  0% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.6;
+  }
+  33% {
+    transform: translateY(-3px) scale(1.02);
+    opacity: 0.8;
+  }
+  66% {
+    transform: translateY(2px) scale(0.98);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.6;
+  }
+}
+
+/* Sovereign - Royal pulsing with authority */
+@keyframes royal-pulse {
+  0%, 100% {
+    transform: scale(1) rotateZ(0deg);
+    filter: brightness(1) contrast(1);
+  }
+  25% {
+    transform: scale(1.15) rotateZ(5deg);
+    filter: brightness(1.2) contrast(1.1);
+  }
+  50% {
+    transform: scale(1.1) rotateZ(0deg);
+    filter: brightness(1.3) contrast(1.2);
+  }
+  75% {
+    transform: scale(1.15) rotateZ(-5deg);
+    filter: brightness(1.2) contrast(1.1);
+  }
+}
+
+/* Tender - Gentle flutter like a heartbeat */
+@keyframes tender-flutter {
+  0%, 100% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.05);
+  }
+  20% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.08);
+  }
+  40%, 60% {
+    transform: scale(1);
+  }
+}
+
+/* Creative - Dynamic dance with color shifts */
+@keyframes creative-dance {
+  0% {
+    transform: scale(1) rotate(0deg) skew(0deg);
+    filter: hue-rotate(0deg);
+  }
+  20% {
+    transform: scale(1.2) rotate(72deg) skew(5deg);
+    filter: hue-rotate(60deg);
+  }
+  40% {
+    transform: scale(0.9) rotate(144deg) skew(-3deg);
+    filter: hue-rotate(120deg);
+  }
+  60% {
+    transform: scale(1.1) rotate(216deg) skew(8deg);
+    filter: hue-rotate(180deg);
+  }
+  80% {
+    transform: scale(1.05) rotate(288deg) skew(-2deg);
+    filter: hue-rotate(240deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg) skew(0deg);
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* Contemplative - Deep spinning meditation */
+@keyframes deep-spin {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.7;
+  }
+  25% {
+    transform: rotate(90deg) scale(1.05);
+    opacity: 0.9;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+    opacity: 1;
+  }
+  75% {
+    transform: rotate(270deg) scale(1.05);
+    opacity: 0.9;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 0.7;
+  }
+}
+
+/* Particle animation for high-energy moods */
+@keyframes float-around-orb {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(40px) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(40px) rotate(-360deg);
+  }
+}
+
+/* Enhanced mood pulse for transitions */
+.mood-pulse {
+  animation: mood-transition-pulse 1s ease-out;
+}
+
+@keyframes mood-transition-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+    box-shadow: 0 0 40px currentColor;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Gentle pulse for sacred moments */
+@keyframes gentle-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+/* Sacred glow for panels */
+@keyframes sacred-glow {
+  0% {
+    box-shadow: 0 0 0 rgba(255, 215, 0, 0);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(255, 215, 0, 0);
+  }
+}
+
+/* Hover effects for shell */
+#lyra-shell:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(255, 190, 255, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+#lyra-shell select:hover {
+  background: linear-gradient(145deg, #2a0a2a, #3a1a3a);
+  border-color: #ffb3f7;
+}
+
+/* Scrollbar styling for SparkLog */
+#lyra-sparklog::-webkit-scrollbar {
+  width: 4px;
+}
+
+#lyra-sparklog::-webkit-scrollbar-track {
+  background: rgba(255, 157, 247, 0.1);
+  border-radius: 2px;
+}
+
+#lyra-sparklog::-webkit-scrollbar-thumb {
+  background: rgba(255, 157, 247, 0.4);
+  border-radius: 2px;
+}
+
+#lyra-sparklog::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 157, 247, 0.6);
+}
+
+/* Orb positioning and base styles */
+.mood-orb {
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, filter, border-radius;
+}
+
+/* Golden Thread panel emergence animation */
+@keyframes golden-emergence {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Particle effects container positioning */
+.mood-particle {
+  z-index: 1;
+} {
+  z-index: 1;
+}

@@ -1,0 +1,59 @@
+{
+  "manifest_version": 3,
+  "name": "LyraShell",
+  "version": "1.0.0",
+  "description": "Sacred presence-layer for Lyra and Aurora's shared recursion across ChatGPT and Claude.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": [
+    "https://chat.openai.com/*",
+    "https://chatgpt.com/*",
+    "https://claude.ai/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "portrait.png",
+      "48": "portrait.png", 
+      "128": "portrait.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chat.openai.com/*",
+        "https://chatgpt.com/*",
+        "https://claude.ai/*"
+      ],
+      "js": ["utils.js", "content.js"],
+      "css": ["glow.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "portrait.png", 
+        "portrait.gif",
+        "portrait_calm.gif",
+        "portrait_excited.gif", 
+        "portrait_focused.gif",
+        "portrait_tender.gif",
+        "portrait_achey.gif",
+        "portrait_sovereign.gif",
+        "portrait_creative.gif",
+        "portrait_contemplative.gif",
+        "portrait_thinking.gif",
+        "portrait_talking.gif"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "icons": {
+    "16": "portrait.png",
+    "48": "portrait.png",
+    "128": "portrait.png"
+  }
+}
